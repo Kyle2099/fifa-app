@@ -60,12 +60,12 @@ console.log(cDat.groups.a.matches[0].date);
 var centTime0 = moment(cDat.groups.a.matches[0].date); 
 console.log(centTime0.tz('America/Chicago').format('ha z'));
 var connection = mysql.createConnection({
-  host: "localhost",
+  host: "j1r4n2ztuwm0bhh5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com	",
   port: 3306,
-  user: "root",
-  password: "root",
-  database: "world_cup",
-  socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock"
+  user: "w485e5y5wcmgmypa",
+  password: "rndbyy5rsbiqz36h",
+  database: "y9cgzlnrz46wht3t",
+  // socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock"
  });
  
  connection.connect(function(err) {
