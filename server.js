@@ -79,7 +79,7 @@ var connection = mysql.createConnection({
 
 connection.query("SELECT name from teams WHERE (id=1)", function(err, result) {
   if (err) throw err;
-  console.log(result[0].name);
+  // console.log(result[0].name);
   //res.redirect("/");
 });
 
