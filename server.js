@@ -34,11 +34,6 @@ app.get("/", function(req, res) {
 
 app.use('/assets', express.static(path.join(__dirname, './public/assets')))
 
-app.get("/bracket", function(req, res) {
-  res.sendFile(path.join(__dirname, "Bracket/bracket.html"));
-});
-
-app.use('/bracket/assets', express.static(path.join(__dirname, './Bracket/assets')))
 
 app.get("/map", function(req, res) {
   res.sendFile(path.join(__dirname, "Map/maps.html"));
