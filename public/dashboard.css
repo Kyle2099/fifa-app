@@ -1,0 +1,36 @@
+.options {
+    margin-bottom: 15px;
+}
+
+#faves {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#img1 {
+    background-color: green;
+}
+
+#img2 {
+    background-color: red;
+}
+
+#img3 {
+    background-color: blueviolet;
+}
+
+#nav-tab {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#nav-tab .nav-item {
+    width: 33%;
+}
+
+.displayTeam {
+    font-size: 3em;
+    line-height: 240px;
+    height: 240px;
+}
+

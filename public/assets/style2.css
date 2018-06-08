@@ -1,0 +1,266 @@
+body{
+    font-family: 'Lora';
+    /* background: rgba(4, 0, 0, 0.31); */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+header {
+    color: white;
+}
+
+nav#mainNav {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+#mainNav {
+    position: absolute;
+    border-bottom: none;
+    background-color: white;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  }
+  
+  #mainNav .navbar-brand {
+    font-weight: 800;
+    color: #343a40;
+  }
+  
+  #mainNav .navbar-toggler {
+    font-size: 12px;
+    font-weight: 800;
+    padding: 13px;
+    text-transform: uppercase;
+    color: #343a40;
+  }
+  
+  #mainNav .navbar-nav > li.nav-item > a {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    color: #FFF;
+  }
+
+  @media only screen and (min-width: 992px) {
+    #mainNav {
+      border-bottom: none;
+      background: transparent;
+    }
+    #mainNav .navbar-brand {
+      padding: 10px 20px;
+      color: #fff;
+    }
+    #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    #mainNav .navbar-nav > li.nav-item > a {
+      padding: 10px 20px;
+      color: #fff;
+    } 
+    #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  @media only screen and (min-width: 992px) {
+    #mainNav {
+      -webkit-transition: background-color 0.2s;
+      -moz-transition: background-color 0.2s;
+      transition: background-color 0.2s;
+      /* Force Hardware Acceleration in WebKit */
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: visible;
+    }
+    #mainNav.is-fixed {
+      /* when the user scrolls down, we hide the header right above the viewport */
+      position: fixed;
+      top: -67px;
+      -webkit-transition: -webkit-transform 0.2s;
+      -moz-transition: -moz-transform 0.2s;
+      transition: transform 0.2s;
+      border-bottom: 0px solid white;
+      
+    }
+    #mainNav.is-fixed .navbar-brand {
+      color: #ffffff;
+    }
+    #mainNav.is-fixed .navbar-brand:focus, #mainNav.is-fixed .navbar-brand:hover {
+      color: #0085A1;
+    }
+    #mainNav.is-fixed .navbar-nav > li.nav-item > a {
+      color: #ffffff;
+    }
+    #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
+      color: #0085A1;
+    }
+    #mainNav.is-visible {
+      /* if the user changes the scrolling direction, we show the header */
+      -webkit-transform: translate3d(0, 100%, 0);
+      -moz-transform: translate3d(0, 100%, 0);
+      -ms-transform: translate3d(0, 100%, 0);
+      -o-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+
+main {
+    
+}
+
+fullheight {
+  min-height: 100vh;
+}
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  z-index: -100;
+}
+
+/* <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"> */
+
+/* ID: #carouselExampleIndicators { border: 5px solid red; } */
+
+/* Class: .carousel { border: 5px solid green; } */
+
+/* Element+ID: div#carouselExampleIndicators { border: 5px solid blue; } */
+
+/* Parent-Child: main div { border: 5px solid blue; } */
+
+/* Attr: [data-ride] {  border: 5px solid purple; } */
+
+h1 {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100 */
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+.modal-header {
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #e9ecef;
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+  color: black;
+}
+
+.form-check-label {
+  margin-bottom: 0;
+  color: black;
+}
+
+a {
+  /* box-shadow: 3px 3px; */
+  color: rgba(255, 248, 248, 0.94);
+}
+
+.copyright {
+ color: #b5f5f0; 
+}
+
+.fa-github:before {
+  content: "\f09b";
+  color: black;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+8,000000+36,000000+36,eff0fc+62,000000+83,000000+100&0+44,0+87,0+87,0.65+97 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 8%, rgba(0,0,0,0) 36%, rgba(74,74,78,0) 44%, rgba(239,240,252,0) 62%, rgba(0,0,0,0) 83%, rgba(0,0,0,0) 87%, rgba(0,0,0,0.65) 97%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 8%,rgba(0,0,0,0) 36%,rgba(74,74,78,0) 44%,rgba(239,240,252,0) 62%,rgba(0,0,0,0) 83%,rgba(0,0,0,0) 87%,rgba(0,0,0,0.65) 97%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 8%,rgba(0,0,0,0) 36%,rgba(74,74,78,0) 44%,rgba(239,240,252,0) 62%,rgba(0,0,0,0) 83%,rgba(0,0,0,0) 87%,rgba(0,0,0,0.65) 97%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+}
+
+.fa-twitter:before {
+  content: "\f099";
+  color: #4AA0EC;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+8,000000+36,000000+36,eff0fc+62,000000+83,000000+100&0+44,0+87,0+87,0.65+97 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 8%, rgba(0,0,0,0) 36%, rgba(74,74,78,0) 44%, rgba(239,240,252,0) 62%, rgba(0,0,0,0) 83%, rgba(0,0,0,0) 87%, rgba(0,0,0,0.65) 97%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 8%,rgba(0,0,0,0) 36%,rgba(74,74,78,0) 44%,rgba(239,240,252,0) 62%,rgba(0,0,0,0) 83%,rgba(0,0,0,0) 87%,rgba(0,0,0,0.65) 97%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 8%,rgba(0,0,0,0) 36%,rgba(74,74,78,0) 44%,rgba(239,240,252,0) 62%,rgba(0,0,0,0) 83%,rgba(0,0,0,0) 87%,rgba(0,0,0,0.65) 97%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+}
+
+.fa-facebook-f:before {
+  content: "\f39e";
+  color: #4967AD;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+8,000000+36,000000+36,eff0fc+62,000000+83,000000+100&0+44,0+87,0+87,0.65+97 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 8%, rgba(0,0,0,0) 36%, rgba(74,74,78,0) 44%, rgba(239,240,252,0) 62%, rgba(0,0,0,0) 83%, rgba(0,0,0,0) 87%, rgba(0,0,0,0.65) 97%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 8%,rgba(0,0,0,0) 36%,rgba(74,74,78,0) 44%,rgba(239,240,252,0) 62%,rgba(0,0,0,0) 83%,rgba(0,0,0,0) 87%,rgba(0,0,0,0.65) 97%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 8%,rgba(0,0,0,0) 36%,rgba(74,74,78,0) 44%,rgba(239,240,252,0) 62%,rgba(0,0,0,0) 83%,rgba(0,0,0,0) 87%,rgba(0,0,0,0.65) 97%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+}
+
+.fa-instagram:before {
+  content: "\f16d";
+  color: white;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+8,000000+36,000000+36,eff0fc+62,000000+83,000000+100&0+44,0+87,0+87,0.65+97 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 8%, rgba(0,0,0,0) 36%, rgba(74,74,78,0) 44%, rgba(239,240,252,0) 62%, rgba(0,0,0,0) 83%, rgba(0,0,0,0) 87%, rgba(0,0,0,0.65) 97%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 8%,rgba(0,0,0,0) 36%,rgba(74,74,78,0) 44%,rgba(239,240,252,0) 62%,rgba(0,0,0,0) 83%,rgba(0,0,0,0) 87%,rgba(0,0,0,0.65) 97%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 8%,rgba(0,0,0,0) 36%,rgba(74,74,78,0) 44%,rgba(239,240,252,0) 62%,rgba(0,0,0,0) 83%,rgba(0,0,0,0) 87%,rgba(0,0,0,0.65) 97%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+footer {
+        padding: 50px 0 65px;
+        margin: 20px;
+        padding: 0;
+}
+
+footer .copyright {
+    font-size: 15px;
+    margin-bottom: 0;
+    text-align: center;
+    
+}
+
+footer .fab {
+  font-size: 2em;
+  color: blueviolet;
+}
+
+#navbarResponsive .nav-item {
+  color: white;
+}
+  

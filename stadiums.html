@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <h1>Display Google maps in Bootstrap Modal</h1>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-lat='55.7159' data-lng='37.5537'>
+      Moscow (Luzhniki)
+    </button>
+
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" data-lat='43.4020' data-lng='39.9553'>
+      Sochi
+    </button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-lat='56.3376' data-lng='43.9633'>
+      Nizhny Novogrod
+    </button>
+
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" data-lat='59.9729' data-lng='30.2205'>
+      Saint Petersburg
+    </button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-lat='55.8179' data-lng='37.4406'>
+      Moscow (Otkritie)
+    </button>
+
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" data-lat='53.2789' data-lng='50.2374'>
+      Samara
+    </button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-lat='55.8212' data-lng='49.1608'>
+      Kazan
+    </button>
+
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" data-lat='47.2095' data-lng='39.7378'>
+      Rostov-on-Don
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12 modal_body_content">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 modal_body_map">
+              <div class="location-map" id="location-map">
+                <div style="width: 600px; height: 400px;" id="map_canvas"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 modal_body_end">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwBYAaZOV6J4PXhuaCD-IZ6OMxEopoNLU&callback=initMap">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="stadium.js"></script>
+</body>
+
+</html>

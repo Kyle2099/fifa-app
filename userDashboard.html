@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/dashboard.css">
+    <title>User Dashboard</title>
+</head>
+
+<body>
+    <!-- Navbar with World Cup 2018 on the left & 'Welcome + Username', Update Preferences Button and Logout Button/Tab on the right -->
+    <!-- <nav class="navbar navbar-light bg-light justify-content-between"> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">WORLD CUP 2018</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <span class="navbar-text">
+
+            </span>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <!-- Button to Open the Modal -->
+                    <a class="nav-link" href='#' data-toggle="modal" data-target="#myModal">| Update Preferences |
+                        <span class="sr-only">(current)</span>
+                    </a>
+
+                    <!-- The Modal -->
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">User Preferences</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h6>Choose upto 3 teams to follow</h6>
+                                                </div>
+                                            </div>
+                                            <div class="row options">
+                                                <div class="col-md-4">
+                                                    <select class="custom-select" id="inputGroupSelect01">
+                                                        <option selected>Choose...</option>
+                                                        <option value="1">Brazil</option>
+                                                        <option value="2">Argentina</option>
+                                                        <option value="3">Uruguay</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <select class="custom-select" id="inputGroupSelect01">
+                                                        <option selected>Choose...</option>
+                                                        <option value="1">Egypt</option>
+                                                        <option value="2">Tunisia</option>
+                                                        <option value="3">Ghana</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <select class="custom-select" id="inputGroupSelect01">
+                                                        <option selected>Choose...</option>
+                                                        <option value="1">France</option>
+                                                        <option value="2">England</option>
+                                                        <option value="3">Germany</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h6>Please enter your address</h6>
+                                                    <div class="form-group">
+
+                                                        <input type="text" class="form-control" id="inputAddress" placeholder="339 E. Chicago Ave">
+                                                    </div>
+
+                                                    <div class="form-row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="inputCity">City</label>
+                                                            <input type="text" class="form-control" id="inputCity" placeholder="Chicago">
+                                                        </div>
+                                                        <div class="form-group col-md-4">
+                                                            <label for="inputState">State</label>
+                                                            <select id="inputState" class="form-control" placeholder="IL">
+                                                                <option selected>IL</option>
+                                                                <option>...</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group col-md-2">
+                                                            <label for="inputZip">Zip</label>
+                                                            <input type="text" class="form-control" id="inputZip">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                    </form>
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Save Preferences</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> LOG OUT </a>
+                </li>
+            </ul>
+            </div>
+            <!-- <span class="navbar-text">
+            Welcome Username
+        </span>
+        <button type="button" class="btn btn-primary">Update Preferences</button>
+        <button type="button" class="btn btn-success">Log Out</button> -->
+    </nav>
+    <div class="jumbotron">
+        <h3>Welcome
+            <em>user </em>
+            <span id='user'></span>
+        </h3>
+        <div class="container">
+            <h3 class="text-center" id="faves">MY FAVORITE TEAMS</h3>
+            <div class="row teamRow">
+                <div class="col-md-4 text-center">
+                    <p>OPTION 1</p>
+                    <a href="#" class="teamFlag">
+                        <img width="200" height="200" id="img1">
+                    </a>
+                </div>
+                <div class="col-md-8 text-center displayTeam">
+                    PORTUGAL
+                </div>
+            </div>
+            <nav>
+                <div class="nav nav-tabs d-none" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active text-center" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home"
+                        aria-selected="true">Team Profile</a>
+                    <a class="nav-item nav-link text-center" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile"
+                        aria-selected="false">Players</a>
+                    <a class="nav-item nav-link text-center" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact"
+                        aria-selected="false">Latest News Stories</a>
+                </div>
+            </nav>
+            <div class="tab-content d-none" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav--tab">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptates quis incidunt dolorum natus id
+                    ad, reiciendis aperiam explicabo, consequuntur in ab dolor, recusandae deleniti delectus laborum. Enim,
+                    tempora perferendis!</div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, inventore nostrum, fugit maxime eos, quaerat
+                    reprehenderit excepturi quisquam error aut ut aperiam? Distinctio dignissimos ea nobis similique corrupti
+                    reiciendis soluta.</div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque ut voluptates atque dolorem minima quibusdam
+                    mollitia, sapiente cum! Atque molestiae dolorem nisi odio sunt aliquid architecto modi vitae nemo harum.</div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 id="faves">LOCAL MEETUPS</h3>
+                <p>Get Social! Watch games with other passionate fans at a meetup near you.</p>
+                <p></p>
+                <p>
+                    <button class="btn btn-lg btn-success" id="signupButton">Add a meetup</button>
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- JAVASCRIPT AND JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- <script src="./login.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <script type="text/javascript">
+        var firebase_config = {
+            apiKey: "AIzaSyA5y8GqPO0dVFs5xshZiFdjKgVgN9OlO0M",
+            authDomain: "world-cup-2018-2e7ca.firebaseapp.com",
+            databaseURL: "https://world-cup-2018-2e7ca.firebaseio.com",
+            projectId: "world-cup-2018-2e7ca",
+            storageBucket: "world-cup-2018-2e7ca.appspot.com",
+            messagingSenderId: "621397211278"
+        };
+
+        firebase.initializeApp(firebase_config);
+        var database = firebase.database();
+
+        // Retrieve the object from storage
+        var retrievedObject = localStorage.getItem('currentUser');
+        console.log('retrievedObject: ', JSON.parse(retrievedObject));
+        var username = JSON.parse(retrievedObject).username;
+        console.log('Logged in User: ', username);
+        $('#user').text(username);
+
+        database.ref().once("value", function (snapshot) {
+            data = snapshot.val();
+            // console.log("DATA: ", data);
+            // console.log("==========================");
+            var keys = Object.keys(data);
+            for (var i = 0; i < keys.length; i++) {
+                // console.log("data[keys[i]].email", data[keys[i]].email);
+
+                if (username === data[keys[i]].username) {
+                    
+                    console.log("found the user");
+                    console.log('[keys[i]] (unique id) : ', [keys[i]]);
+                    console.log('Here is his info: ', data[keys[i]]);
+                    data[keys[i]] = { 
+                        username: data[keys[i]].username,
+                        email: data[keys[i]].email,
+                        password: data[keys[i]].password,
+                        "hello" : 'worlddddddddd'
+                    };
+                    database.ref(keys[i]).set(data[keys[i]]);
+                    //     {
+                        
+                    //         username: data[keys[i]].username,
+                    //         email: data[keys[i]].email,
+                    //         password: data[keys[i]].password,
+                    //         hello: 'world'
+                    // }
+                
+                    $('.teamFlag').on('click', function () {
+                        $('#nav-tab').removeClass('d-none');
+                        $('#nav-tabContent').removeClass('d-none');
+                        
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
