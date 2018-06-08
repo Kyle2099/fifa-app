@@ -64,7 +64,7 @@ var connection = mysql.createConnection({
   port: 3306,
   user: "w485e5y5wcmgmypa",
   password: "rndbyy5rsbiqz36h",
-  database: "world_cup",
+  database: "y9cgzlnrz46wht3t",
   // socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock"
  });
  
@@ -77,7 +77,7 @@ var connection = mysql.createConnection({
   console.log("connected as id " + connection.threadId);
  });
 
-connection.query("SELECT name from world_cup.teams WHERE (id=1)", function(err, result) {
+connection.query("SELECT name from teams WHERE (id=1)", function(err, result) {
   if (err) throw err;
   console.log(result[0].name);
   //res.redirect("/");
